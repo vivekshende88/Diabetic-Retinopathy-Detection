@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Diabetic Retinopathy Detection</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🩺 Diabetic Retinopathy Detection</h1>
+
+<p>Upload Fundus Image to detect disease stage</p>
+
+<form action="/predict" method="post" enctype="multipart/form-data">
+
+<label class="upload-box">
+<input type="file" name="file" id="fileInput" required>
+Choose Fundus Image
+</label>
+
+<img id="preview" />
+
+<br>
+
+<button type="submit">Predict</button>
+
+</form>
+
+</div>
+
+<script>
+
+const input = document.getElementById("fileInput");
+const preview = document.getElementById("preview");
+
+input.addEventListener("change", function(){
+    const file = input.files[0];
+    preview.src = URL.createObjectURL(file);
+    preview.style.display = "block";
+});
+
+</script>
+
+</body>
+</html>
