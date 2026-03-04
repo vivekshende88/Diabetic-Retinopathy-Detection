@@ -16,9 +16,10 @@ pip install numpy
 pip install pandas
 
 ---
-
+( MAKE SURE YOU HAVE UPLOAD FOLDER in root )
 ### Step 3 — Run the Application
 python app.py
 
 ---
+
 http://127.0.0.1:5000
