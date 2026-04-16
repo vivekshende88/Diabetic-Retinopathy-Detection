@@ -8,6 +8,7 @@ Open terminal / command prompt inside the project folder.
 ### Step 2 — Install Required Packages
 
 Run the following commands:
+
 pip install tensorflow
 pip install flask
 pip install pillow
